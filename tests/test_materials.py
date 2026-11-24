@@ -19,6 +19,17 @@ class MaterialTests(unittest.TestCase):
                 self.assertEqual(set(rows[0]), set(rows[-1]))
                 self.assertTrue(all(any(value.strip() for value in row.values()) for row in rows))
 
+    def test_scenario_materials_have_resolvable_business_references(self):
+        rules = read_table(ROOT / "data/ticket_rules.csv")
+        sales = read_table(ROOT / "data/sales.csv")
+        history = read_table(ROOT / "data/price_history.csv")
+        slots = read_table(ROOT / "data/slot_context.csv")
+        self.assertTrue({row["ticket_type"] for row in rules} >= {"adult", "family", "member", "group"})
+        self.assertIn("refunded", {row["order_state"] for row in sales})
+        adult_prices = {row["price"] for row in history if row["ticket_type"] == "adult"}
+        self.assertGreaterEqual(len(adult_prices), 2)
+        self.assertIn("partial-closure", {row["closure_state"] for row in slots})
+
     def test_dates_and_identifiers_remain_strings(self):
         for path in (ROOT / 'data').glob('*.csv'):
             rows = read_table(path)
