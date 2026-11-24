@@ -1,0 +1,4 @@
+response_id,period,visitor_group,purchase_state,price_band,visit_party,barrier,survey_source
+A-1,2026-02,family,purchased,mid,family,none,exit-survey
+A-2,2026-02,student,not-purchased,low,solo,price,web-survey
+A-3,2026-02,member,purchased,low,pair,none,member-panel

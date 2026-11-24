@@ -1,0 +1,4 @@
+slot_id,date,day_type,show_id,planned_capacity,access_seats,closure_state,other_event
+SL-1,2027-02-13,weekend,SHOW-1,420,20,open,theatre-festival
+SL-2,2027-02-15,weekday,SHOW-1,360,18,open,none
+SL-3,2027-02-20,weekend,SHOW-1,410,20,partial-closure,city-holiday

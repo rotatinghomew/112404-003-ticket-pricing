@@ -1,0 +1,4 @@
+rule_id,show_id,ticket_type,period,channel,base_price,discount_kind,discount_value,eligibility,valid_from,valid_to
+TR-1,SHOW-1,adult,weekend,onsite,88,none,0,public,2027-02-01,2027-03-31
+TR-2,SHOW-1,family,weekday,online,148,bundle,28,two-adults-child,2027-02-01,2027-03-31
+TR-3,SHOW-1,member,all,online,58,member,30,active-member,2027-02-01,2027-03-31

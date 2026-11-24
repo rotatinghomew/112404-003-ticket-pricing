@@ -1,0 +1,4 @@
+order_id,slot_id,channel,ticket_type,quantity,unit_price,discount,fee,order_state,ordered_at,refund_date
+O-1,SL-1,online,adult,2,88,0,4,settled,2027-02-02,
+O-2,SL-1,group-desk,group,24,66,0,0,confirmed,2027-02-03,
+O-3,SL-2,online,family,1,148,28,6,refunded,2027-02-08,2027-02-10
