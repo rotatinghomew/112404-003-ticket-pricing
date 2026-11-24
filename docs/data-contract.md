@@ -6,5 +6,6 @@
 - `sales.csv`：多渠道售票、退款及实际入账事件。字段为 `order_id, slot_id, channel, ticket_type, quantity, unit_price, discount, fee, order_state, ordered_at, refund_date`。
 - `slot_context.csv`：场次日历、同期活动和可售容量。字段为 `slot_id, date, day_type, show_id, planned_capacity, access_seats, closure_state, other_event`。
 - `audience_observations.csv`：访客构成及购票阻碍调查，未加权汇总。字段为 `response_id, period, visitor_group, purchase_state, price_band, visit_party, barrier, survey_source`。
+- `price_history.csv`：历史票价暴露、可售容量和购买事实，按场次保留。字段为 `slot_id, ticket_type, price, available, sold, day_type, calendar_context, channel`。
 
 空字段表示事实尚未提供，`pending`、`review`、`hold` 等状态表示来源记录尚未形成最终确认。不同来源以事件日期或有效期表达的时间含义不相同，调用方应结合表名和字段解释；不能仅因编号相同就假定两条记录可合并。金额以资料中记载的名义单位表示，没有统一换算或预先扣除退款。

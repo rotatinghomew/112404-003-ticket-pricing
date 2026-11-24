@@ -1,0 +1,5 @@
+slot_id,ticket_type,price,available,sold,day_type,calendar_context,channel
+H-11,adult,82,400,328,weekend,regular,onsite
+H-12,adult,88,360,342,weekend,city-event,online
+H-13,family,138,100,63,weekday,regular,online
+H-14,family,148,90,71,weekday,holiday-week,online
